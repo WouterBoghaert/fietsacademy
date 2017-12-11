@@ -1,6 +1,7 @@
 package be.vdab.services;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.PersistenceException;
@@ -50,5 +51,10 @@ public class DocentService extends AbstractService {
 			rollback();
 			throw ex;
 		}
+	}
+	
+	public List<Docent> findByWeddeBetween(
+		BigDecimal van, BigDecimal tot, int vanafRij, int aantalRijen) {
+		return docentRepository.findByWeddeBetween(van, tot, vanafRij, aantalRijen);
 	}
 }
