@@ -25,7 +25,10 @@ public class VanTotWeddeServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if(request.getQueryString() != null) {
+		if(request.getQueryString() == null) {
+			request.setAttribute("tot", docentService.findMaxWedde());
+		}
+		else {
 			Map<String,String> fouten = new HashMap<>();
 			String van = request.getParameter("van");
 			if(!StringUtils.isBigDecimal(van)) {
