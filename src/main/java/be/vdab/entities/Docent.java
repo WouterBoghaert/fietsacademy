@@ -41,9 +41,9 @@ public class Docent implements Serializable{
 		joinColumns = @JoinColumn(name="docentid"))
 	@Column(name="Bijnaam")
 	private Set<String> bijnamen;
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name="campusid")
-	private Campus campus;	
+//	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+//	@JoinColumn(name="campusid")
+//	private Campus campus;	
 	
 	public Docent(String voornaam, String familienaam, BigDecimal wedde,
 		Geslacht geslacht, long rijksRegisterNr) {
@@ -149,12 +149,25 @@ public class Docent implements Serializable{
 	public void removeBijnaam(String bijnaam) {
 		bijnamen.remove(bijnaam);
 	}
-
-	public Campus getCampus() {
-		return campus;
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Docent)) {
+			return false;
+		}
+		return ((Docent) obj).rijksRegisterNr == rijksRegisterNr;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Long.valueOf(rijksRegisterNr).hashCode();
 	}
 
-	public void setCampus(Campus campus) {
-		this.campus = campus;
-	}
+//	public Campus getCampus() {
+//		return campus;
+//	}
+//
+//	public void setCampus(Campus campus) {
+//		this.campus = campus;
+//	}
 }
