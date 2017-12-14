@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import javax.persistence.NoResultException;
 
+import be.vdab.entities.Campus;
 import be.vdab.entities.Docent;
 import be.vdab.valueobjects.AantalDocentenPerWedde;
 import be.vdab.valueobjects.VoornaamEnId;
@@ -71,5 +72,12 @@ public class DocentRepository extends AbstractRepository {
 		catch(NoResultException ex) {
 			return Optional.empty();
 		}
+	}
+	
+	public List<Docent> findByBestBetaaldeVanEenCampus(Campus campus) {
+		return getEntityManager()
+			.createNamedQuery("Docent.findBestBetaaldeVanEenCampus", Docent.class)
+			.setParameter("campus", campus)
+			.getResultList();
 	}
 }
