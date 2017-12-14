@@ -13,10 +13,12 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import be.vdab.enums.Geslacht;
@@ -33,14 +35,15 @@ public class Docent implements Serializable{
 	private BigDecimal wedde;
 	private long rijksRegisterNr;
 	@Enumerated(EnumType.STRING)
-	private Geslacht geslacht;
-	
+	private Geslacht geslacht;	
 	@ElementCollection
 	@CollectionTable(name="docentenbijnamen",
 		joinColumns = @JoinColumn(name="docentid"))
 	@Column(name="Bijnaam")
 	private Set<String> bijnamen;
-	
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name="campusid")
+	private Campus campus;	
 	
 	public Docent(String voornaam, String familienaam, BigDecimal wedde,
 		Geslacht geslacht, long rijksRegisterNr) {
@@ -145,5 +148,13 @@ public class Docent implements Serializable{
 	
 	public void removeBijnaam(String bijnaam) {
 		bijnamen.remove(bijnaam);
+	}
+
+	public Campus getCampus() {
+		return campus;
+	}
+
+	public void setCampus(Campus campus) {
+		this.campus = campus;
 	}
 }

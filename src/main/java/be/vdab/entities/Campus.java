@@ -42,6 +42,10 @@ public class Campus implements Serializable {
 	}
 	
 	protected Campus() {}
+	
+	public long getId() {
+		return id;
+	}
 
 	public String getNaam() {
 		return naam;
