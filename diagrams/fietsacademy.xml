@@ -13,9 +13,20 @@
 	<entity>
 		<entity-name>be.vdab.entities.Campus</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>186</entity-height>
+		<entity-height>206</entity-height>
 		<entity-X-Coordinate>490</entity-X-Coordinate>
 		<entity-Y-Coordinate>608</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>be.vdab.entities.Verantwoordelijkheid</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>146</entity-height>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>1066</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -26,28 +37,6 @@
 		<entity-width>120</entity-width>
 		<entity-height>108</entity-height>
 		<entity-X-Coordinate>50</entity-X-Coordinate>
-		<entity-Y-Coordinate>338</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>be.vdab.valueobjects.TelefoonNr</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>110</entity-height>
-		<entity-X-Coordinate>50</entity-X-Coordinate>
-		<entity-Y-Coordinate>856</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>be.vdab.entities.GroepsCursus</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>90</entity-height>
-		<entity-X-Coordinate>490</entity-X-Coordinate>
 		<entity-Y-Coordinate>338</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
@@ -66,6 +55,28 @@
 	</entity>
 
 	<entity>
+		<entity-name>be.vdab.entities.GroepsCursus</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>90</entity-height>
+		<entity-X-Coordinate>490</entity-X-Coordinate>
+		<entity-Y-Coordinate>338</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>be.vdab.valueobjects.TelefoonNr</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>110</entity-height>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>856</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
 		<entity-name>be.vdab.entities.IndividueleCursus</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>70</entity-height>
@@ -77,11 +88,11 @@
 	</entity>
 
 	<entity>
-		<entity-name>be.vdab.entities.Verantwoordelijkheid</entity-name>
+		<entity-name>be.vdab.entities.Manager</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>146</entity-height>
+		<entity-height>166</entity-height>
 		<entity-X-Coordinate>50</entity-X-Coordinate>
-		<entity-Y-Coordinate>1066</entity-Y-Coordinate>
+		<entity-Y-Coordinate>1312</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
